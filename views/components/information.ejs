@@ -1,24 +1,40 @@
-<div class="fh5co-entry padding">
-    <img
-        src="images/project-1.jpg"
-        alt="Free HTML5 Bootstrap Template by FreeHTML5.co"
-    />
-    <div>
-        <span class="fh5co-post-date"> information</span>
+<div class="row">
+    <div class="three columns">
+        <img class="profile-pic" src="images/avt_duck.jpg" alt="" />
+    </div>
+
+    <div class="nine columns main-col">
+        <h2>About Me</h2>
 
         <p>
-            + Address:
-            <a href="mailto: <%=information.address %>"
-                ><%=information.address %></a
-            >
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+            accusantium doloremque laudantium, totam rem
         </p>
-        <p>
-            + Web_link:
-            <a href="<%=information.web_link %>"><%=information.web_link %></a>
-        </p>
-        <p>
-            + Phone:
-            <a href="tel: <%=information.phone %>"> <%=information.phone %></a>
-        </p>
+
+        <div class="fh5co-entry padding">
+            <div>
+                <p>
+                    + Address:
+                    <a href="mailto: <%=information[0].address %>"
+                        ><%=information[0].address %></a
+                    >
+                </p>
+                <p>
+                    + Web_link:
+                    <a href="<%=information[0].web_link %>"
+                        ><%=information[0].web_link %></a
+                    >
+                </p>
+                <p>
+                    + Phone:
+                    <a href="tel: <%=information[0].phone %>">
+                        <%=information[0].phone %></a
+                    >
+                </p>
+            </div>
+        </div>
+
+        <!-- end row -->
     </div>
+    <!-- end .main-col -->
 </div>
