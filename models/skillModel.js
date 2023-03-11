@@ -5,17 +5,12 @@ var Schema = mongoose.Schema;
 var SkillSchema = new Schema({
     name: {
         type: String,
-        default: "",
     },
-    desc: {
+    percent: {
         type: String,
-    },
-    songId: {
-        type: String,
-        default: null,
     },
 });
 
-var SkillModel = mongoose.model("kill", SkillSchema);
+var SkillModel = mongoose.model("Skill", SkillSchema);
 
 module.exports = SkillModel;

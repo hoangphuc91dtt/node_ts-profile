@@ -7,7 +7,6 @@ async function index(req, res, next) {
     const skills = await Skill.find({});
     const experiences = await Experience.find({});
     const educations = await Education.find({});
-    console.log();
     res.render("index", {
         information: informations,
         skills: skills,
