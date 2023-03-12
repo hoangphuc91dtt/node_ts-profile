@@ -1,18 +1,23 @@
-const Information = require("../models/informationModel");
-const Skill = require("../models/skillModel");
-const Education = require("../models/educationModel");
-const Experience = require("../models/experienceModel");
-async function index(req, res, next) {
-    const informations = await Information.find({});
-    const skills = await Skill.find({});
-    const experiences = await Experience.find({});
-    const educations = await Education.find({});
+let Education = require("../models/educationModel");
+let Experience = require("../models/experienceModel");
+let Information = require("../models/informationModel");
+let Skill = require("../models/skillModel");
+
+async function index(req, res) {
+    let skills = await Skill.find();
+    let educations = await Education.find();
+    let informations = await Information.find();
+    console.log(informations);
+    let experiences = await Experience.find();
+    console.log(skills);
     res.render("index", {
-        information: informations,
+        title: "MyCv",
         skills: skills,
-        experience: experiences,
-        education: educations,
+        educations: educations,
+        informations: informations,
+        experiences: experiences,
     });
 }
-
-module.exports = { index };
+module.exports = {
+    index,
+};
