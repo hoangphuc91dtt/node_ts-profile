@@ -7,6 +7,9 @@ var EducationSchema = new Schema({
     level: { type: String },
     date: { type: String },
     description: { type: String },
+    time_year: { type: String },
+    name_Education: { type: String },
+    title_Education: { type: String },
 });
 
 var EducationModel = mongoose.model("education", EducationSchema);

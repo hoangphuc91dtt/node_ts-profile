@@ -8,6 +8,9 @@ var ExperienceSchema = new Schema({
     startDate: { type: String },
     endDate: { type: String },
     description: { type: String },
+    time_year: { type: String },
+    name_experience: { type: String },
+    title_experience: { type: String },
 });
 
 var ExperienceModel = mongoose.model("experience", ExperienceSchema);
